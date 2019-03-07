@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTextFieldView" customModule="CoreDataSample" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="49N-7f-t8H"/>
+                <outlet property="customTextField" destination="Hau-pG-b5a" id="h0F-NE-n9G"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6g-4R-CqG">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="46"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hau-pG-b5a">
+                            <rect key="frame" x="4" y="4" width="332" height="38"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="qgS-MY-cox"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c94-Lz-dJg">
+                            <rect key="frame" x="0.0" y="44" width="340" height="2"/>
+                            <color key="backgroundColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="4ev-t3-Sen"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="c94-Lz-dJg" secondAttribute="trailing" id="0NW-bL-STj"/>
+                        <constraint firstItem="c94-Lz-dJg" firstAttribute="top" secondItem="Hau-pG-b5a" secondAttribute="bottom" constant="2" id="6a6-jH-oJq"/>
+                        <constraint firstAttribute="bottom" secondItem="c94-Lz-dJg" secondAttribute="bottom" id="ApU-CR-LZR"/>
+                        <constraint firstItem="c94-Lz-dJg" firstAttribute="leading" secondItem="W6g-4R-CqG" secondAttribute="leading" id="Pce-xM-5Ju"/>
+                        <constraint firstAttribute="trailing" secondItem="Hau-pG-b5a" secondAttribute="trailing" constant="4" id="U8U-vR-bCi"/>
+                        <constraint firstItem="Hau-pG-b5a" firstAttribute="leading" secondItem="W6g-4R-CqG" secondAttribute="leading" constant="4" id="UJk-GD-Tac"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W6g-4R-CqG" secondAttribute="trailing" id="19Z-SO-EoT"/>
+                <constraint firstItem="W6g-4R-CqG" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Hox-vq-Yeu"/>
+                <constraint firstItem="W6g-4R-CqG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JKr-3p-agY"/>
+                <constraint firstItem="W6g-4R-CqG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="X3H-TR-qBK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="73.599999999999994" y="-16.191904047976013"/>
+        </view>
+    </objects>
+</document>
