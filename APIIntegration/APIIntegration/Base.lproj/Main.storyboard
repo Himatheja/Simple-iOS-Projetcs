@@ -18,12 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F4v-SL-1pv">
-                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="F4v-SL-1pv" secondAttribute="height" multiplier="1:1" id="Sgv-9Q-vpg"/>
-                                </constraints>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F4v-SL-1pv">
+                                <rect key="frame" x="0.0" y="146" width="375" height="521"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="giF-ll-08k">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -51,18 +48,21 @@
                                     <constraint firstAttribute="height" constant="50" id="AoM-KO-UWU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="29"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.66837967720000002" blue="0.3468855347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.99215686270000003" green="0.66837967720000002" blue="0.3468855347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SI1-fl-TiO" secondAttribute="trailing" constant="16" id="3Yj-XI-QKF"/>
                             <constraint firstItem="F4v-SL-1pv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88i-8D-rm6"/>
                             <constraint firstItem="F4v-SL-1pv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bg9-wr-PKW"/>
+                            <constraint firstItem="F4v-SL-1pv" firstAttribute="top" secondItem="SI1-fl-TiO" secondAttribute="bottom" constant="12" id="D5o-3q-nb1"/>
                             <constraint firstItem="SI1-fl-TiO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a0n-aU-Ec1"/>
+                            <constraint firstItem="F4v-SL-1pv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dQP-W3-ISs"/>
                             <constraint firstItem="SI1-fl-TiO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="dth-Ej-xV3"/>
-                            <constraint firstItem="F4v-SL-1pv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="plK-nO-Ilc"/>
+                            <constraint firstItem="F4v-SL-1pv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pUV-pW-DPH"/>
+                            <constraint firstItem="F4v-SL-1pv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="73" id="plK-nO-Ilc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F4v-SL-1pv" secondAttribute="trailing" id="v7U-lE-3vm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,6 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="103.89805097451276"/>
         </scene>
     </scenes>
 </document>

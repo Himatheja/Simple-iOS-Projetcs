@@ -13,12 +13,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [self layoutSubviews];
+//    [self layoutSubviews];
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-//    self.nameLabel.frame = 
-}
+//- (void)layoutSubviews {
+////    [super layoutSubviews];
+////    self.nameLabel.frame =
+//}
 
 @end

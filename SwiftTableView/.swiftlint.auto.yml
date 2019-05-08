@@ -1,0 +1,4 @@
+  - trailing_whitespace
+  - trailing_newline
+  - vertical_whitespace
+  - colon

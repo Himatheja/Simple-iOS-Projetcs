@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		9C5ACCD92236351E00162DF0 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9C5ACCDC2236351E00162DF0 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				9C5ACCDD2236354A00162DF0 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		536761252EE4F66583BA47BF /* libPods-APIIntegration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BD3D423FEED38041C630F7 /* libPods-APIIntegration.a */; };
 		9C3DEC2A223130F1008BD8C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3DEC29223130F1008BD8C3 /* AppDelegate.m */; };
@@ -170,6 +184,9 @@
 					9C3DEC24223130F0008BD8C3 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					9C5ACCD92236351E00162DF0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 9C3DEC20223130F0008BD8C3 /* Build configuration list for PBXProject "APIIntegration" */;
@@ -186,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				9C3DEC24223130F0008BD8C3 /* APIIntegration */,
+				9C5ACCD92236351E00162DF0 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +244,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9C5ACCDD2236354A00162DF0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsource ~/.bash_profile\ncd ${SRCROOT}\nxcodebuild -scheme <projectName> -workspace <projectName>.xcworkspace clean\nxcodebuild -scheme <projectName> -workspace <projectName>.xcworkspace | xcpretty -r json-compilation-database --output compile_commands.json\noclint-json-compilation-database -exclude Pods -exclude build -exclude Internal -exclude ThirdParties -- -report-type xcode\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -383,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YH5BHVLK8;
 				INFOPLIST_FILE = APIIntegration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YH5BHVLK8;
 				INFOPLIST_FILE = APIIntegration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,6 +445,24 @@
 				PRODUCT_BUNDLE_IDENTIFIER = in.testProj.com.APIIntegration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C5ACCDA2236351E00162DF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YH5BHVLK8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C5ACCDB2236351E00162DF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YH5BHVLK8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -428,6 +483,15 @@
 			buildConfigurations = (
 				9C3DEC3C223130F2008BD8C3 /* Debug */,
 				9C3DEC3D223130F2008BD8C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5ACCDC2236351E00162DF0 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5ACCDA2236351E00162DF0 /* Debug */,
+				9C5ACCDB2236351E00162DF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
